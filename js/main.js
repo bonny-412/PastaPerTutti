@@ -16,10 +16,15 @@
     const buttonAddPersona = document.querySelector('#addPersona');
     const buttonCalcolaPorzioni = document.querySelector('#calcolaPorzioni');
     const pesoPastaCottaTot = document.querySelector('#pesoPastaCottaTot');
+    const logo = document.querySelector('#logo');
 
     creaListaPersoneAvvioApp();
 
     // event listeners
+    logo.addEventListener('clicl', e => {
+        window.location.reload();
+    });
+
     buttonAddPersona.addEventListener('click', e => {
         e.preventDefault();
         addItemToDOM();
