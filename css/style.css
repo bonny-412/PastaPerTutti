@@ -65,6 +65,10 @@ section {
         width: 100%;
         border-radius: 20px;
     }
+
+    .container-result .heading__title {
+        font-size: 1rem;
+    }
 }
 
 .heading {
