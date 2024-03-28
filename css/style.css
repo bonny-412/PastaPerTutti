@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css?family=Gochi+Hand");
+
+:root {
+    --color-yellow: #FBC13A;
+    --color-red: #FB703C;
+    --color-blue: #021864;
+    --text-color: #494a4b;
+    --bg-color: #f1f5f8;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: var(--color-yellow);
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color);
+    font-family: "Gochi Hand", cursive;
+    text-align: center;
+    font-size: 130%;
+
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+footer a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+section {
+    flex: 1;
+}
+
+.container-home {
+    background: var(--bg-color);
+    background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
+    background-size: 25px 25px;
+    border-radius: 20px;
+    box-shadow: 4px 3px 7px 2px #00000040;
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+@media only screen and (max-width: 789px) {
+    body {
+        padding: 0rem;
+    }
+    .container-home {
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.heading__title {
+    transform: rotate(2deg);
+    padding: 0.2rem 1.2rem;
+    border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
+    background-color: var(--color-red);
+    font-size: 1.5rem;
+    color: var(--color-blue);
+}
+
+@media only screen and (min-width: 500px) {
+    .heading__title {
+        font-size: 2rem;
+    }
+}
+.heading__img {
+    width: 14rem;
+    height: 14rem;
+}
+
+/* FORM */
+.persone-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.25rem;
+    overflow-y: auto;
+    box-shadow: inset 0px 0px 3px 1px var(--color-yellow);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    flex-wrap: wrap;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    max-height: 10rem;
+}
+
+.persone-list .persone-list-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.persone-list .persone-list-item span {
+    margin-right: 0.5rem;
+}
+
+.persone-list .persone-list-item #nomePersona-1::before {
+    margin-right: 0.5rem;
+    border-right: 2px solid black;
+    content: '|';
+}
+
+.span-peso-pasta-cruda {
+    background-color: var(--color-yellow);
+    border-radius: 5px;
+    width: 2rem;
+}
+
+.button-delete {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--color-yellow);
+    border-radius: 5px;
+    margin-right: 1.50rem;
+}
+
+.persona-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form__label {
+    display: block;
+    padding: 0.7rem;
+}
+
+.form__input {
+    box-sizing: border-box;
+    background-color: transparent;
+    padding: 0.7rem;
+    border-bottom-right-radius: 15px 3px;
+    border-bottom-left-radius: 3px 15px;
+    border: solid 3px transparent;
+    border-bottom: dashed 3px var(--color-yellow);
+    font-family: "Gochi Hand", cursive;
+    font-size: 1rem;
+    color: rgba(63, 62, 65, 0.7);
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.form__input:focus {
+    outline: none;
+    border: solid 3px var(--color-yellow);
+    background-color: var(--bg-color);
+}
+
+.container-porzioni {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.container-peso-pasta-cotta {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-peso-pasta-cotta .form__input {
+    width: 30%;
+}
+
+@media only screen and (min-width: 500px) {
+    .form__input {
+        width: 60%;
+    }
+    .container-peso-pasta-cotta .form__input {
+        width: 10%;
+    }
+}
+.button-cartoon {
+    padding: 0;
+    border: none;
+    transform: rotate(4deg);
+    transform-origin: center;
+    font-family: "Gochi Hand", cursive;
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 #494a4b;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-image: url("data:image/gif;base64,R0lGODlhBAAEAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5NUY1OENCRDdDMDYxMUUyOTEzMEE1MEM5QzM0NDVBMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5NUY1OENCRTdDMDYxMUUyOTEzMEE1MEM5QzM0NDVBMyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjk1RjU4Q0JCN0MwNjExRTI5MTMwQTUwQzlDMzQ0NUEzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjk1RjU4Q0JDN0MwNjExRTI5MTMwQTUwQzlDMzQ0NUEzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAAAQABAAAAgYEEpdoeQUAOw==");
+    background-color: var(--color-red);
+}
+
+.button-cartoon span {
+    background: var(--bg-color);
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 2px solid #494a4b;
+}
+
+.button-cartoon:active {
+    transform: translateY(4px);
+    padding-bottom: 0px;
+    outline: 0;
+}
+
+.blink {
+    animation: blink 1s infinite;
+    border-bottom: dashed 5px var(--color-red);
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes occhioAperto {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes occhioChiuso {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+@keyframes sorrisoOn {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes sorrisoOff {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.bocca-aperta {
+    animation: sorrisoOn 2s infinite alternate;
+}
+
+.bocca-chiusa {
+    animation: sorrisoOff 2s infinite alternate;
+}
+
+/* RESULT */
+
+.container-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.container-result div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.result {
+    display: grid;
+    row-gap: 0.75rem;
+    column-gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.result span {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.result span .span-peso-pasta-cruda {
+    margin-right: 0.5rem;
+    width: auto;
+    padding: 0.25rem;
+}
+
+.result span .result-peso-pasta-cotta {
+    margin-left: 0.5rem;
+    font-weight: bolder;
+}
+
+.hide {
+    display: none;
+    transition: transform ease-out 1s;
+}
+
+.container-button-action {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
