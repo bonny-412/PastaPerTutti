@@ -21,7 +21,7 @@
     creaListaPersoneAvvioApp();
 
     // event listeners
-    logo.addEventListener('clicl', e => {
+    logo.addEventListener('click', e => {
         window.location.reload();
     });
 
